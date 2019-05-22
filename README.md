@@ -8,4 +8,4 @@ This is the first draft of my personal website. Here are a view ideas I plan to 
 - Cat section where I can post pictures of my cats
 - Contact page that sends an email to me
 
-Made with :love:
+Made with :heart:
