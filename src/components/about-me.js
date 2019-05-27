@@ -76,11 +76,11 @@ class About extends Component {
             <div style={pStyle}>
               <h2 style={noSpace}>hey, i'm jane le!</h2>
               <h3 style={size1}>
-                i'm in mechatronics engineering student at the uWaterloo.
+                i'm a mechatronics engineering student at the uWaterloo.
               </h3>
               <p>
                 lover of all things new, i enjoy learning and have more
-                curiousity than a cat. currently, im polishing my
+                curiosity than a cat. currently, im polishing up my
                 web-development skills to bring my ideas into real life. i enjoy
                 creating games and feel-good experiences for the user. bring out
                 the monsters because i'm ready to slay any challenge that comes
