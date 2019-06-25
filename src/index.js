@@ -11,8 +11,8 @@ const textStyle = {
   fontFamily: "Karla",
   fontWeight: "bold",
   fontSize: "24px",
-  textShadow: "2px 2px 8px rgba(0, 0, 0, 0.25)",
-  color: "#F0EBF4"
+  //textShadow: "2px 2px 8px rgba(0, 0, 0, 0.25)",
+  color: "red"
 };
 
 const drawerStyle = {
@@ -25,7 +25,7 @@ function App() {
     <div className="demo-big-content">
       <Layout
         style={{
-          background: "#A1C3D1 center / cover"
+          background: "white center / cover"
         }}
       >
         <Header to="/" title="" scroll transparent style={textStyle}>

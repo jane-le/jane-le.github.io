@@ -5,7 +5,7 @@ import "react-mdl/extra/material.js";
 import { Grid, Cell } from "react-mdl";
 import { SocialIcon } from "react-social-icons";
 const textStyle = {
-  color: "#F0EBF4",
+  color: "black",
   fontFamily: "Karla",
   letterSpacing: 15,
   fontWeight: "bold",
@@ -68,7 +68,7 @@ class About extends Component {
       <div style={divStyle}>
         <h1 style={textStyle}>about me</h1>
         <Grid>
-          <Cell col={5}>
+          <Cell col={12}>
             <img style={imgStyle} src={portrait} alt="Picture of Me" />
           </Cell>
           <Cell col={1}> </Cell>
@@ -78,19 +78,6 @@ class About extends Component {
               <h3 style={size1}>
                 i'm a mechatronics engineering student at the uWaterloo.
               </h3>
-              <p>
-                lover of all things new, i enjoy learning and have more
-                curiosity than a cat. currently, im polishing up my
-                web-development skills to bring my ideas into real life. i enjoy
-                creating games and feel-good experiences for the user. bring out
-                the monsters because i'm ready to slay any challenge that comes
-                my way!
-              </p>
-              <p>
-                when i'm not coding away, i enjoy smashing tennis balls, thrift
-                shopping (yay for sustainable fashion!), and chowing down on
-                sushi.
-              </p>
               <p>let's connect!</p>
               <SocialIcon
                 className="button-style"
