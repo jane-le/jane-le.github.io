@@ -3,12 +3,12 @@ import Wave from "react-wavify";
 import { SocialIcon } from "react-social-icons";
 import "../../src/styles.css";
 const nameStyle = {
-  color: "#E5E5E5",
+  color: "#3c00b2",
   fontFamily: "Karla",
   letterSpacing: 15,
   fontWeight: "bold",
   fontSize: "13vmin",
-  textShadow: "2px 2px 8px rgba(0,0,0, 0.25)",
+  // textShadow: "2px 2px 8px rgba(0,0,0, 0.25)",
   textAlign: "center",
   marginTop: "15vh",
   marginBottom: "0px"
@@ -66,7 +66,7 @@ const wavePos8 = {
 };
 
 const buttonStyle = {
-  stroke: "#FFF",
+  stroke: "#8c52ff",
   margin: "10px"
 };
 
