@@ -66,7 +66,7 @@ const wavePos8 = {
 };
 
 const buttonStyle = {
-  stroke: "#8c52ff",
+  stroke: "#3c00b2",
   margin: "10px"
 };
 
@@ -84,7 +84,7 @@ class Landing extends Component {
         <div>
           <div style={wavePos1}>
             <Wave
-              fill="#F172A1"
+              fill="#d4c3f6"
               paused={pauseStatus}
               options={{
                 height: 15,
@@ -96,7 +96,7 @@ class Landing extends Component {
           </div>
           <div style={wavePos2}>
             <Wave
-              fill="rgb(172,46,149)"
+              fill="#3c00b2"
               paused={pauseStatus}
               options={{
                 height: 1,
@@ -108,7 +108,7 @@ class Landing extends Component {
           </div>
           <div style={wavePos3}>
             <Wave
-              fill="#B39BC8"
+              fill="#FFF"
               paused={pauseStatus}
               options={{
                 height: 10,
@@ -120,7 +120,7 @@ class Landing extends Component {
           </div>
           <div style={wavePos4}>
             <Wave
-              fill="#E64398"
+              fill="#8c52ff"
               paused={pauseStatus}
               options={{
                 height: 40,
@@ -132,7 +132,7 @@ class Landing extends Component {
           </div>
           <div style={wavePos5}>
             <Wave
-              fill="rgb(161,194,209)"
+              fill="#d4c3f6"
               paused={pauseStatus}
               options={{
                 height: 50,
@@ -144,7 +144,7 @@ class Landing extends Component {
           </div>
           <div style={wavePos6}>
             <Wave
-              fill="rgb(172,46,149"
+              fill="#3c00b2"
               paused={pauseStatus}
               options={{
                 height: 40,
@@ -156,7 +156,7 @@ class Landing extends Component {
           </div>
           <div style={wavePos7}>
             <Wave
-              fill="#B39BC8"
+              fill="#FFF"
               paused={pauseStatus}
               options={{
                 height: 75,
@@ -168,7 +168,7 @@ class Landing extends Component {
           </div>
           <div style={wavePos8}>
             <Wave
-              fill="#E64398"
+              fill="#8c52ff"
               paused={pauseStatus}
               options={{
                 height: 120,
@@ -178,7 +178,7 @@ class Landing extends Component {
               }}
             />
           </div>
-          <h1 style={nameStyle}>jane le</h1>
+          <h1 style={nameStyle}>Jane Le</h1>
           <div style={centerButtons}>
             <SocialIcon
               className="button-style"
