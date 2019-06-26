@@ -9,10 +9,8 @@ import Main from "./components/main";
 
 const textStyle = {
   fontFamily: "Karla",
-  fontWeight: "bold",
-  fontSize: "24px",
   //textShadow: "2px 2px 8px rgba(0, 0, 0, 0.25)",
-  color: "red"
+  color: "#3c00b2"
 };
 
 const drawerStyle = {
@@ -29,11 +27,17 @@ function App() {
         }}
       >
         <Header to="/" title="" scroll transparent style={textStyle}>
-          <Navigation style={textStyle}>
-            <Link to="/">home</Link>
-            <Link to="/aboutme">about</Link>
+          <Navigation>
+            <Link style={textStyle} to="/">
+              home
+            </Link>
+            <Link style={textStyle} to="/aboutme">
+              about
+            </Link>
             <a
+              style={textStyle}
               target="_blank"
+              rel="noopener noreferrer"
               href="https://drive.google.com/file/d/1_B7d36IwspjvpXdgbiabeULaNkUPh87v/view"
             >
               resume
@@ -46,6 +50,7 @@ function App() {
             <Link to="/aboutme">about</Link>
             <a
               target="_blank"
+              rel="noopener noreferrer"
               href="https://drive.google.com/file/d/1_B7d36IwspjvpXdgbiabeULaNkUPh87v/view"
             >
               resume
