@@ -1,4 +1,3 @@
-
 import React, { Component } from "react";
 import portrait from "../assets/portrait.jpg";
 import "react-mdl/extra/material.css";
@@ -89,7 +88,7 @@ class About extends Component {
 }
 
 export default About;
-=======
+/*
 import React, { Component } from "react";
 import portrait from "../assets/portrait.jpg";
 import "react-mdl/extra/material.css";
@@ -207,4 +206,4 @@ class About extends Component {
 }
 
 export default About;
-
+*/
