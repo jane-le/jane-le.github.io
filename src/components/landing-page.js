@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Waves from "../../src/components/Waves/waves";
-import { SocialIcon } from "react-social-icons";
+import Wave from "./Wave/Wave";
+import SocialIcon from "./SocialIcon/SocialIcon.js"
 
 const nameStyle = {
   color: "#3c00b2",
@@ -27,7 +27,6 @@ const centerButtons = {
   width: "50%",
   textAlign: "center"
 };
-var pauseStatus = false;
 
 class Landing extends Component {
   render() {
@@ -36,33 +35,10 @@ class Landing extends Component {
         <div>
           <h1 style={nameStyle}>Jane Le</h1>
           <div style={centerButtons}>
-            <SocialIcon
-              className="button-style"
-              bgColor="rgba(0,0,0,0)"
-              fgColor="#FFF"
-              network="linkedin"
-              url="https://www.linkedin.com/in/jane-le-245362155/"
-              style={buttonStyle}
-            />
-            <SocialIcon
-              className="button-style"
-              bgColor="rgba(0,0,0,0)"
-              fgColor="#FFF"
-              network="github"
-              url="https://github.com/jane-le/"
-              style={buttonStyle}
-            />
-            <SocialIcon
-              className="button-style"
-              bgColor="rgba(0,0,0,0)"
-              fgColor="#FFF"
-              network="mailto"
-              url="mailto:janele913@gmail.com"
-              style={buttonStyle}
-            />
+            <SocialIcon width='50px'></SocialIcon>
           </div>
         </div>
-        <Waves></Waves>
+        <Wave></Wave>
       </div>
     );
   }
