@@ -5,7 +5,6 @@
   "main": "src/index.js",
   "dependencies": {
     "font-awesome": "4.7.0",
-    "gh-pages": "2.0.1",
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-mdl": "1.11.0",
@@ -16,17 +15,22 @@
     "styled-components": "4.2.0"
   },
   "devDependencies": {
+    "gh-pages": "^2.0.1",
     "typescript": "3.3.3"
   },
   "scripts": {
-    "start": "react-scripts start",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"],
-  
-  "homepage" : "http://jane-le.github.io/jane-le.github.io"
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "homepage": "http://jane-le.github.io/jane-le.github.io"
 }
