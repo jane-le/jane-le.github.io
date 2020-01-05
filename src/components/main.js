@@ -8,7 +8,7 @@ import Contact from "./contact";
 
 const Main = () => (
   <Switch>
-    <Route exact path="/jane-le.github.io/" component={Landing} />
+    <Route exact path="/" component={Landing} />
     <Route path="/aboutme" component={About} />
     <Route path="/projects" component={Projects} />
     <Route path="/resume" component={Resume} />
