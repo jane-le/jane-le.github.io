@@ -17,12 +17,13 @@
     "styled-components": "4.2.0"
   },
   "devDependencies": {
+    "gh-pages": "^2.0.1",
     "typescript": "3.3.3"
   },
   "scripts": {
-    "start": "react-scripts start",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
@@ -32,5 +33,6 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "homepage": "http://jane-le.github.io/"
 }
