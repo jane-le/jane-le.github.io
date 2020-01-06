@@ -3,7 +3,7 @@ import portrait from "../assets/portrait.jpg";
 import "react-mdl/extra/material.css";
 import "react-mdl/extra/material.js";
 import { Grid, Cell } from "react-mdl";
-import { SocialIcon } from "react-social-icons";
+
 const textStyle = {
   color: "black",
   fontFamily: "Karla",
