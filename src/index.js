@@ -9,15 +9,8 @@ import Main from "./components/main";
 
 function App() {
   return (
-    <div className="demo-big-content">
-      <Layout
-        style={{ background: "white center / cover"}}>
-        <Content>
-          <div className="page-content" />
-          <Main />
-        </Content>
-      </Layout>
-    </div>
+    <Main/>
+
   );
 }
 

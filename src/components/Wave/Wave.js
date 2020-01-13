@@ -110,7 +110,7 @@ class Wave extends Component {
       ...rest
     } = this.props
     return (
-      <div style={{ width: '100%', height: '500px', display: 'inline-block', ...style }}
+      <div style={{width: '100%', display: 'inline-block', ...style }}
            className={className} id={id} ref={this.container}>
         <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
           {children}

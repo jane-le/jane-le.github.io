@@ -15,10 +15,12 @@ class SocialIcon extends Component {
   const List = styled.ul`
     list-style: none;
     display: inline-flex;
+    margin: 0;
+    padding: 0;
   `
 
   const Button = styled.a`
-    border: 2px solid ${theme.colorPrimary};
+    border: 1px solid ${theme.colorPrimary};
     transition: all .1s ease;
     &:hover {
       background: ${theme.colorPrimary};
@@ -27,8 +29,10 @@ class SocialIcon extends Component {
     display: inline-block;
     padding: 10px;
     border-radius: 50px;
-    margin: 10px;
+    margin: 8px;
     color: ${theme.colorPrimary};
+    height: ${this.props.width};
+    width: ${this.props.width};
   `
 
     return (
