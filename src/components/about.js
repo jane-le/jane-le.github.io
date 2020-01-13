@@ -3,10 +3,11 @@ import portrait from "../assets/portrait.jpg";
 import "react-mdl/extra/material.css";
 import "react-mdl/extra/material.js";
 import { Grid, Cell } from "react-mdl";
+import  theme  from "../lib/theme"
 
 const textStyle = {
   color: "black",
-  fontFamily: "Karla",
+  fontFamily: theme.font,
   letterSpacing: 15,
   fontWeight: "bold",
   fontSize: "5vmin",
@@ -24,7 +25,7 @@ const divStyle = {
 };
 
 const pStyle = {
-  fontFamily: "Karla",
+  fontFamily: theme.font,
   color: "black",
   textShadow: "2px 2px 8px rgba(255,255,255, 0.25)",
   margin: "0px",
@@ -38,30 +39,12 @@ const size1 = {
   padding: "0px"
 };
 
-const buttonStyle = {
-  stroke: "#000",
-  margin: "2px",
-  padding: "0px",
-  width: 30,
-  height: 30
-};
-
-const buttonStyle1 = {
-  stroke: "#000",
-  marginRight: "2px",
-  padding: "0px",
-  width: 30,
-  height: 30
-};
 const noSpace = {
   margin: "0px",
   padding: "0px",
   paddingBottom: "10px"
 };
 
-const purpleColor = {
-  color: "rgb(172,46,149)"
-};
 class About extends Component {
   render() {
     return (

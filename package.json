@@ -14,9 +14,10 @@
     "react-scripts": "2.1.8",
     "react-social-icons": "4.1.0",
     "react-wavify": "1.1.4",
-    "styled-components": "^4.2.0"
+    "styled-components": "^4.4.1"
   },
   "devDependencies": {
+    "babel-plugin-styled-components": "^1.10.6",
     "gh-pages": "^2.0.1",
     "typescript": "3.3.3"
   },

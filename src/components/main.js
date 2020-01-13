@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import Landing from "./landing-page";
-import About from "./about-me";
+import Landing from "./landing";
+import About from "./about";
 import Projects from "./projects";
 import Resume from "./resume";
 import Contact from "./contact";
