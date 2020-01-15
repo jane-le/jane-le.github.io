@@ -1,52 +1,52 @@
-import React, { Component } from "react";
-import portrait from "../assets/portrait.jpg";
-import  theme  from "../lib/theme"
-
-const textStyle = {
-  color: "white",
-  fontFamily: theme.font,
-  letterSpacing: 15,
-  fontWeight: "bold",
-  fontSize: "5vmin",
-  textAlign: "left",
-  width: "100%",
-  margin: 0,
-};
-
-const imgStyle = {
-  width: "40vmin"
-};
-
-const divStyle = {
-  background: theme.colorPrimary,
-};
+import React, { Component } from "react"
+import theme  from "../lib/theme"
+import Card from "../components/Card"
+import styled from "styled-components"
+import data from "../lib/data"
 
 
-const size1 = {
-  fontSize: "16px",
-  margin: "0px",
-  padding: "0px",
-  color: "white",
-};
+const Container = styled.div`
+    background-attachment: fixed; 
+    background: ${theme.colorPrimary};
+    width: 100%;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    justify-content: center;
+` 
 
-const noSpace = {
-  margin: "0px",
-  padding: "0px",
-  paddingBottom: "10px",
-  color: "white"
-};
+const NameHeader = styled.h1`
+  color: ${theme.colorBackground};
+  font-family: ${theme.font};
+  margin:0;
+  font-size: 34px;
+  font-weight: bold;
+` 
+const Footer = styled.h1`
+  color: ${theme.colorBackground};
+  font-family: ${theme.font};
+  margin:0;
+  padding: 10px;
+  font-size: 12px;
+  position: absolute; 
+  bottom: 0;
+` 
 
 class About extends Component {
   render() {
     return (
-      <div style={divStyle}>
-        <h1 style={textStyle}>about me</h1>
-        <h2 style={noSpace}>hey, i'm jane le!</h2>
-          <h3 style={size1}>
-            i'm a mechatronics engineering student at the uWaterloo.
-          </h3>
-        <img style={imgStyle} src={portrait} alt="Me" />
-      </div>
+      <Container>
+        <NameHeader>Me</NameHeader>
+        <Card 
+          description={data.about.description} 
+          title={data.about.title}
+          subtitle={data.about.subtitle}
+          isPrimary={true}>
+        </Card>
+      <Footer>{data.footer}</Footer>
+      </Container>
     );
   }
 }

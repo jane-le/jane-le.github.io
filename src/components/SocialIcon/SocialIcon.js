@@ -4,6 +4,7 @@ import {ReactComponent as LinkedIn} from '../../assets/linkedin-in-brands.svg'
 import {ReactComponent as File} from '../../assets/file-solid.svg'
 import styled from 'styled-components'
 import theme from '../../lib/theme'
+import ReactTooltip from 'react-tooltip'
 
 class SocialIcon extends Component {
   render () {
@@ -38,19 +39,22 @@ class SocialIcon extends Component {
     return (
       <List>
         <li>
-          <Button target="_blank" href={data.githubLink}>
+          <Button data-tip={data.githubTooltip} target="_blank" href={data.githubLink}>
             <Github height={width} width={width}></Github>  
           </Button>
+          <ReactTooltip aria-haspopup='true'/>
         </li>
         <li>
-          <Button target="_blank" href={data.linkedinLink}>
+          <Button data-tip={data.resumeTooltip} target="_blank" href={data.resume}>
             <File height={width} width={width}></File> 
           </Button>
+          <ReactTooltip aria-haspopup='true'/>
         </li>
         <li>
-          <Button target="_blank" href={data.resume}>
+          <Button data-tip={data.linkedinTooltip} target="_blank" href={data.linkedinLink}>
             <LinkedIn height={width} width={width}></LinkedIn>  
           </Button>
+          <ReactTooltip aria-haspopup='true'/>
         </li>
       </List>
     )

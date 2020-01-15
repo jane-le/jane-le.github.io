@@ -1,20 +1,20 @@
 // Component from react wavify: https://github.com/woofers/react-wavify
 // Modified for purpose of this project 
-
 import React, { Component } from 'react'
+import theme from '../../lib/theme'
 
 class Wave extends Component {
   constructor (props) {
     super(props)
     this.container = React.createRef()
     this.state = { path: '' }
-    this.options = {
+    this.defaults = {
       height: 20,
-      amplitude: 10,
-      speed: 0.15,
+      amplitude: 20,
+      speed: 0.25,
       points: 3,
-      ...props.options
     }
+    this.options = { ...props.options, ...this.defaults }
     this.lastUpdate = 0
     this.elapsed = 0
     this.step = 0
@@ -27,7 +27,7 @@ class Wave extends Component {
       const scale = 100
       const x = i / this.options.points * this.width()
       const seed = (this.step + (i + i % this.options.points)) * this.options.speed * scale
-      const height = (Math.sin(seed / scale) * this.options.amplitude - (i * this.options.amplitude))
+      const height = Math.sin(seed / scale) * this.options.amplitude
       const y = Math.sin(seed / scale) * height  + this.options.height
       points.push({x, y})
     }
@@ -87,6 +87,26 @@ class Wave extends Component {
     this.lastUpdate = new Date()
   }
 
+  componentDidUpdate(prevProps) {
+    const transfer = key => {
+      if (typeof this.props.options === 'undefined') {
+        this.options[key] = this.defaults[key]
+      }
+      else if (this.options[key] !== this.props.options[key]) {
+        if (typeof this.props.options[key] === 'undefined') {
+          this.options[key] = this.defaults[key]
+        }
+        else {
+          this.options[key] = this.props.options[key]
+        }
+      }
+    }
+    transfer('height')
+    transfer('amplitude')
+    transfer('speed')
+    transfer('points')
+  }
+
   componentDidMount () {
     if (!this.frameId) {
       this.resume()
@@ -110,7 +130,7 @@ class Wave extends Component {
       ...rest
     } = this.props
     return (
-      <div style={{width: '100%', display: 'inline-block', ...style }}
+      <div style={{ width: '100%', display: 'inline-block', ...style }}
            className={className} id={id} ref={this.container}>
         <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
           {children}
@@ -123,7 +143,7 @@ class Wave extends Component {
 
 Wave.defaultProps = {
   paused: false,
-  fill: 'pink'
+  fill: theme.colorPrimary,
 }
 
-export default Wave;
+export default Wave

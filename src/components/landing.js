@@ -1,42 +1,43 @@
-import React, { Component } from "react";
-import Wave from "./Wave/Wave";
-import SocialIcon from "./SocialIcon/SocialIcon.js"
+import React, { Component } from "react"
+import Wave from "./Wave/Wave"
 import theme from "../lib/theme"
 import styled from "styled-components"
 import data from "../lib/data"
-import About from "../components/about"
-
-const NameHeader = styled.h1`
-  color: ${theme.colorPrimary};
-  font-family: ${theme.font};
-  font-weight: bold;
-  margin:0;
-  padding: 0;
-  letter-spacing: 10px;
-
-` 
-const Container = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column; 
-  align-items: center;
-  height: 100%:
-  
-`
+import About from "./About"
+import Header from "./Header"
+import posed, { PoseGroup } from 'react-pose'
 
 const MainCountainer = styled.div`
   width: 100%;
   height: 100%;
+  background: ${theme.colorBackground}
 `
+
+const DarkMode = styled.a`
+  position: absolute; 
+  top: 0;
+  right: 0; 
+  color: black;
+  cursor: pointer;
+  font-family: ${theme.font};
+  z-index: 100;
+  font-size: 16px;
+`
+
+const Waves = styled(Wave)`
+  margin-top: 80vh;
+  position: relative;
+`
+
 class Landing extends Component {
+
   render() {
+
     return (
       <MainCountainer>
-        <Container>
-          <NameHeader>Jane Le</NameHeader>
-          <SocialIcon data={data} width="25px"></SocialIcon>
-        </Container>
-        <Wave fill={theme.colorPrimary}></Wave>
+        <DarkMode>{data.darkMode}</DarkMode>
+        <Header data={data} theme={theme}/>
+        <Waves fill={theme.colorPrimary}></Waves>
         <About/>
       </MainCountainer>
     );
