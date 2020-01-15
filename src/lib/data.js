@@ -34,8 +34,8 @@ const data = {
         }
     ],
     footer: "Jane Le 2020 | Built with ❤️.",
-    darkMode: "click here dark mode",
-    defaultMode: "click here light mode"
+    darkMode: "click here for dark mode",
+    defaultMode: "click here for light mode"
 }
 
 export default data;
