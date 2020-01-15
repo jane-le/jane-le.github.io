@@ -23,10 +23,10 @@ class SocialIcon extends Component {
     } = this.props;
 
   const Button = styled.a`
-    border: 1px solid ${theme.colorPrimary};
+    border: 1px solid ${theme.colorAccent};
     transition: all .1s ease;
     &:hover {
-      background: ${theme.colorPrimary};
+      background: ${theme.colorAccent};
       color: white;
       transform: scale(1.2);
     }
@@ -34,7 +34,7 @@ class SocialIcon extends Component {
     padding: 10px;
     border-radius: 50px;
     margin: 8px;
-    color: ${theme.colorPrimary};
+    color: ${theme.colorAccent};
     height: ${this.props.width};
     width: ${this.props.width};
   `
