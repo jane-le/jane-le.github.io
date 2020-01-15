@@ -1,43 +1,59 @@
-import React, { Component } from "react";
-import Wave from "./Wave/Wave";
-import SocialIcon from "./SocialIcon/SocialIcon.js"
+import React, { Component } from "react"
+import Wave from "./Wave/Wave"
 import theme from "../lib/theme"
 import styled from "styled-components"
 import data from "../lib/data"
-import About from "../components/about"
+import About from "./About"
+import Header from "./Header"
 
-const NameHeader = styled.h1`
-  color: ${theme.colorPrimary};
-  font-family: ${theme.font};
-  font-weight: bold;
-  margin:0;
-  padding: 0;
-  letter-spacing: 10px;
-
-` 
-const Container = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column; 
-  align-items: center;
-  height: 100%:
-  
+const Waves = styled(Wave)`
+  margin-top: 80vh;
+  position: relative;
 `
 
-const MainCountainer = styled.div`
-  width: 100%;
-  height: 100%;
-`
 class Landing extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isDarkMode: false,
+    }
+
+    this.handleDarkClick = this.handleDarkClick.bind(this)
+  }
+
+  handleDarkClick() {
+    this.setState({
+      isDarkMode: !this.state.isDarkMode,
+    });
+  }
+
   render() {
+    const {isDarkMode} = this.state;
+    const colorTheme = isDarkMode ? theme.darkTheme : theme.defaultTheme;
+    const MainCountainer = styled.div`
+      width: 100%;
+      height: 100%;
+      background: ${colorTheme.colorBackground}
+    `
+    const DarkMode = styled.a`
+      position: fixed; 
+      padding: 10px;
+      top: 0;
+      right: 0; 
+      color: black;
+      cursor: pointer;
+      font-family: ${colorTheme.font};
+      z-index: 100;
+      font-size: 16px;
+      color: ${colorTheme.textColor}
+    `
     return (
       <MainCountainer>
-        <Container>
-          <NameHeader>Jane Le</NameHeader>
-          <SocialIcon data={data} width="25px"></SocialIcon>
-        </Container>
-        <Wave fill={theme.colorPrimary}></Wave>
-        <About/>
+        <DarkMode onClick={this.handleDarkClick}>{isDarkMode ?data.defaultMode : data.darkMode}</DarkMode>
+        <Header data={data} theme={colorTheme}/>
+        <Waves fill={colorTheme.colorPrimary}></Waves>
+        <About colorTheme={colorTheme}/>
       </MainCountainer>
     );
   }
