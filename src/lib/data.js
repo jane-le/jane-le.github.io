@@ -8,7 +8,7 @@ const data = {
     about: {
         title: "Hey there!👋",
         subtitle: "I'm a ",
-        description: "Passionate with software developer with a soft spot for the end-user. I enjoy leading projects, crafting elegant solutions, and having fun while doing it. Specializing in web/android development, I'm eager to apply my skills and be impactful! "
+        description: "I have a passion for software development with a soft spot for the end-user. I enjoy leading projects, crafting elegant solutions, and having fun while doing it. Specializing in web/android development, I'm eager to apply my skills and be impactful! "
     },
     aboutLoop: [
         "software developer.",
@@ -16,7 +16,7 @@ const data = {
         "tetris dominator.",
         "frequent tea drinker.",
         "boiled eggs enthusiast.",
-        "occasional volleyball player.",
+        "sometimes volleyball player.",
         "loser for romcoms."
     ],
     projects: [{
@@ -33,8 +33,9 @@ const data = {
             description: "PLACEHOLDER",
         }
     ],
-    footer: "Jane Le 2020 | Made with 🌮",
-    darkMode: "dark mode"
+    footer: "Jane Le 2020 | Built with ❤️!",
+    darkMode: "click here dark mode",
+    defaultMode: "click here light mode"
 }
 
 export default data;

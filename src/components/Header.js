@@ -1,6 +1,8 @@
 import React, { Component } from "react"
 import styled from 'styled-components'
 import SocialIcon from '../components/SocialIcon/SocialIcon'
+import ReactTooltip from 'react-tooltip'
+import Image from '../assets/portrait.jpg'
 
 class Header extends Component {
     render() {
@@ -8,13 +10,16 @@ class Header extends Component {
             data,
             theme
         } = this.props;
-        const NameHeader = styled.h1`
-            color: ${theme.colorPrimary};
+        const NameHeader = styled.a`
+            color: ${theme.colorAccent};
             font-family: ${theme.font};
             font-weight: bold;
             margin:0;
-            padding: 0;
-            letter-spacing: 10px;
+            padding: 30px;
+            font-size: 58px;
+            cursor: pointer;
+            z-index: 100;
+            letter-spacing: 15px;
         ` 
         const Container = styled.div`
             width: 100%;
@@ -25,13 +30,19 @@ class Header extends Component {
             justify-content: center;
             position: fixed;
         `
+        const ImageContainer = styled.img`
+            width: 300px;
+        
+        `
+
         return (
-            <div>
-                <Container>
-                    <NameHeader>Jane Le</NameHeader>
-                    <SocialIcon data={data} width={theme.socialIconSize}></SocialIcon>
-                </Container>
-            </div>
+            <Container>
+                <NameHeader data-tip data-for="Tooltip">Jane Le</NameHeader>
+                <ReactTooltip place="right" id="Tooltip">
+                    <ImageContainer src={Image}/>
+                </ReactTooltip>
+                <SocialIcon theme={theme} data={data} width={theme.socialIconSize}></SocialIcon>
+            </Container>
         );
     }
 }

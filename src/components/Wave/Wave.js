@@ -1,7 +1,6 @@
 // Component from react wavify: https://github.com/woofers/react-wavify
 // Modified for purpose of this project 
 import React, { Component } from 'react'
-import theme from '../../lib/theme'
 
 class Wave extends Component {
   constructor (props) {
@@ -143,7 +142,6 @@ class Wave extends Component {
 
 Wave.defaultProps = {
   paused: false,
-  fill: theme.colorPrimary,
 }
 
 export default Wave

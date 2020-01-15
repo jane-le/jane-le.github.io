@@ -10,12 +10,13 @@ class Card extends Component {
         title,
         subtitle,
         description,
-        isPrimary
+        isPrimary,
+        colorTheme
     } = this.props;
 
     const Container = styled.div`
-        background: ${theme.cardBackgroundColor};
-        color: ${theme.textColor};
+        background: ${colorTheme.colorBackground};
+        color: ${colorTheme.textColor};
         flex-direction: column;
         display: flex; 
         align-items: left;
@@ -24,7 +25,7 @@ class Card extends Component {
         opacity: 100%;
         padding: 10vh;
         margin: 30px;
-        box-shadow: 1px 1px 8px ${theme.colorBackground};
+        box-shadow: 1px 1px 8px ${colorTheme.colorBackground};
         height: ${isPrimary ? theme.cardPrimaryHeight : theme.cardHeight};
         width: ${isPrimary ? theme.cardPrimaryWidth : theme.cardWidth};
         @media screen and (max-width: 767px) {
@@ -37,7 +38,7 @@ class Card extends Component {
         margin-top: 20px;
         margin-bottom: 10px;
         padding: 0;
-        border-top: 1px solid ${theme.cardLineColor};
+        border-top: 1px solid ${colorTheme.colorPrimary};
         padding-top: 15px;
         
     `
@@ -45,28 +46,31 @@ class Card extends Component {
     const Description = styled.p`
         margin: 0; 
         padding: 0;
-        font-family: ${theme.font};
+        font-family: ${colorTheme.font};
         font-size: 14px;
         text-align: center;
+        color: ${colorTheme.textColor};
     
     `
 
     const Title = styled.h2`
         margin: 0; 
-        font-family: ${theme.font};
+        font-family: ${colorTheme.font};
         font-size: 24px;
         line-height: 28px;
+        color: ${colorTheme.textColor};
     `
 
     const Subtitle = styled.h3`
         margin: 0; 
         padding: 0;
-        font-family: ${theme.font};
+        font-family: ${colorTheme.font};
         font-size: 16px;
         line-height: 20px;
+        color: ${colorTheme.textColor};
     `
     const TextLooper = styled(TextLoop)`
-        color: ${theme.colorPrimary}
+        color: ${colorTheme.colorAccent}
     `
 
     return (
