@@ -22,7 +22,7 @@ class About extends Component {
     ` 
 
     const NameHeader = styled.h1`
-      color: ${colorTheme.colorAccent};
+      color: #FFFFFF;
       font-family: ${colorTheme.font};
       margin:0;
       font-size: 34px;

@@ -10,7 +10,7 @@ class Wave extends Component {
     this.defaults = {
       height: 20,
       amplitude: 20,
-      speed: 0.25,
+      speed: 0.35,
       points: 3,
     }
     this.options = { ...props.options, ...this.defaults }
