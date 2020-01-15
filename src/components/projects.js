@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import theme  from "../lib/theme"
-import Card from "../components/Card"
+import Card from "./Card"
 import styled from "styled-components"
 import data from "../lib/data"
 

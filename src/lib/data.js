@@ -33,7 +33,7 @@ const data = {
             description: "PLACEHOLDER",
         }
     ],
-    footer: "Jane Le 2020 | Built with ❤️!",
+    footer: "Jane Le 2020 | Built with ❤️.",
     darkMode: "click here dark mode",
     defaultMode: "click here light mode"
 }

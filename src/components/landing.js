@@ -51,7 +51,7 @@ class Landing extends Component {
     return (
       <MainCountainer>
         <DarkMode onClick={this.handleDarkClick}>{isDarkMode ?data.defaultMode : data.darkMode}</DarkMode>
-        <Header data={data} theme={colorTheme}/>
+        <Header data={data} colorTheme={colorTheme}/>
         <Waves fill={colorTheme.colorPrimary}></Waves>
         <About colorTheme={colorTheme}/>
       </MainCountainer>

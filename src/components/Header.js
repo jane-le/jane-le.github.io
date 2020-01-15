@@ -3,16 +3,18 @@ import styled from 'styled-components'
 import SocialIcon from '../components/SocialIcon/SocialIcon'
 import ReactTooltip from 'react-tooltip'
 import Image from '../assets/portrait.jpg'
+import theme from '../lib/theme'
 
 class Header extends Component {
     render() {
         const {
             data,
-            theme
+            colorTheme
         } = this.props;
+        
         const NameHeader = styled.a`
-            color: ${theme.colorAccent};
-            font-family: ${theme.font};
+            color: ${colorTheme.colorAccent};
+            font-family: ${colorTheme.font};
             font-weight: bold;
             margin:0;
             padding: 30px;
@@ -41,7 +43,7 @@ class Header extends Component {
                 <ReactTooltip place="right" id="Tooltip">
                     <ImageContainer src={Image}/>
                 </ReactTooltip>
-                <SocialIcon theme={theme} data={data} width={theme.socialIconSize}></SocialIcon>
+                <SocialIcon theme={colorTheme} data={data} width={theme.socialIconSize}></SocialIcon>
             </Container>
         );
     }

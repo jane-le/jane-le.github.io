@@ -28,14 +28,15 @@ class SocialIcon extends Component {
     &:hover {
       background: ${theme.colorPrimary};
       color: white;
+      transform: scale(1.2);
     }
     display: inline-block;
     padding: 10px;
     border-radius: 50px;
     margin: 8px;
     color: ${theme.colorPrimary};
-    height: ${width};
-    width: ${width};
+    height: ${this.props.width};
+    width: ${this.props.width};
   `
 
     return (

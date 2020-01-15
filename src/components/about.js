@@ -1,10 +1,9 @@
 import React, { Component } from "react"
-import Card from "../components/Card"
+import Card from "./Card"
 import styled from "styled-components"
 import data from "../lib/data"
 
 class About extends Component {
-
   render() {
     const {
       colorTheme
@@ -29,6 +28,7 @@ class About extends Component {
       font-size: 34px;
       font-weight: bold;
     ` 
+
     const Footer = styled.h1`
       color: #FFFFFF;
       font-family: ${colorTheme.font};
@@ -48,7 +48,7 @@ class About extends Component {
           subtitle={data.about.subtitle}
           isPrimary={true}>
         </Card>
-      <Footer>{data.footer}</Footer>
+        <Footer>{data.footer}</Footer>
       </Container>
     );
   }
