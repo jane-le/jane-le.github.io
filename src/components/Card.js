@@ -29,8 +29,15 @@ class Card extends Component {
         height: ${isPrimary ? theme.cardPrimaryHeight : theme.cardHeight};
         width: ${isPrimary ? theme.cardPrimaryWidth : theme.cardWidth};
         @media screen and (max-width: 767px) {
+            height: 50vh;
+            width: 35vh;
+            padding: 5vh;
+        }
+
+        @media screen and (max-width: 320px) {
             height: 55vh;
-            width: 25vh;
+            width: 45vh;
+            padding: 5vh;
         }
         
     `
@@ -70,14 +77,16 @@ class Card extends Component {
         color: ${colorTheme.textColor};
     `
     const TextLooper = styled(TextLoop)`
-        color: ${colorTheme.colorAccent}
+        color: ${colorTheme.colorAccent};
+        word-break: break-word;
+        word-wrap: break-word;
     `
 
     return (
         <Container>
             <Title>{title}</Title>
             <Subtitle>{subtitle}
-            {
+           {
                 isPrimary ? (
                 <TextLooper children={data.aboutLoop} />
                 ) : (<Subtitle></Subtitle>)
