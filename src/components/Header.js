@@ -11,7 +11,6 @@ class Header extends Component {
             data,
             colorTheme
         } = this.props;
-        
         const NameHeader = styled.a`
             color: ${colorTheme.colorAccent};
             font-family: ${colorTheme.font};
@@ -22,6 +21,15 @@ class Header extends Component {
             cursor: pointer;
             z-index: 100;
             letter-spacing: 15px;
+        ` 
+
+        const Subtitle = styled.h1`
+            color: ${colorTheme.colorAccent};
+            font-family: ${colorTheme.font};
+            margin:0;
+            padding: 0;
+            font-size: 22px;
+            z-index: 100;
         ` 
         const Container = styled.div`
             width: 100%;
@@ -43,6 +51,7 @@ class Header extends Component {
                 <ReactTooltip place="right" id="Tooltip">
                     <ImageContainer src={Image}/>
                 </ReactTooltip>
+                <Subtitle>{data.headerSubtitle}</Subtitle>
                 <SocialIcon theme={colorTheme} data={data} width={theme.socialIconSize}></SocialIcon>
             </Container>
         );

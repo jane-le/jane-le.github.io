@@ -5,6 +5,9 @@ const data = {
     linkedinTooltip: "Here's my LinkedIn!",
     resumeTooltip: "Check out my resume!",
     resume: "data",
+    mailLink: "mailto:j39le@edu.uwaterloo.ca",
+    mailTooltip: "Shoot me an email!",
+    headerSubtitle: "2A Mechatronics Engineering Student",
     about: {
         title: "Hey there!👋",
         subtitle: "I'm a ",
@@ -35,7 +38,10 @@ const data = {
     ],
     footer: "Jane Le 2020 | Built with ❤️.",
     darkMode: "click here for dark mode",
-    defaultMode: "click here for light mode"
+    defaultMode: "click here for light mode",
+    catPhotos: [
+    ],
+    catBtnText: "click here for cat"
 }
 
 export default data;

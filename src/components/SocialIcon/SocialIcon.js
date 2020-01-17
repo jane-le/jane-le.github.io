@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import {ReactComponent as Github} from '../../assets/github-brands.svg'
 import {ReactComponent as LinkedIn} from '../../assets/linkedin-in-brands.svg'
 import {ReactComponent as File} from '../../assets/file-solid.svg'
+import {ReactComponent as Mail} from '../../assets/envelope-regular.svg'
 import styled from 'styled-components'
 import ReactTooltip from 'react-tooltip'
 import Pdf from '../../assets/resume.pdf'
@@ -56,6 +57,12 @@ class SocialIcon extends Component {
         <li>
           <Button data-tip={data.linkedinTooltip} target="_blank" href={data.linkedinLink}>
             <LinkedIn height={width} width={width}></LinkedIn>  
+          </Button>
+          <ReactTooltip aria-haspopup='true'/>
+        </li>
+        <li>
+          <Button data-tip={data.mailTooltip} href={data.mailLink}>
+            <Mail height={width} width={width}></Mail>  
           </Button>
           <ReactTooltip aria-haspopup='true'/>
         </li>
