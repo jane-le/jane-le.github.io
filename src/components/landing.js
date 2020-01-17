@@ -5,7 +5,6 @@ import styled from "styled-components"
 import data from "../lib/data"
 import About from "./About"
 import Header from "./Header"
-import CatBtn from "./CatBtn"
 
 const Waves = styled(Wave)`
   margin-top: 80vh;
@@ -60,7 +59,6 @@ class Landing extends Component {
     `
     return (
       <MainCountainer>
-        <CatBtn catPhotos={data.catPhotos} colorTheme={colorTheme} catText={data.catBtnText}></CatBtn>
         <DarkMode onClick={this.handleDarkClick}>{isDarkMode ?data.defaultMode : data.darkMode}</DarkMode>
         <Header data={data} colorTheme={colorTheme}/>
         <Waves fill={colorTheme.colorPrimary}></Waves>
