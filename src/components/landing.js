@@ -60,7 +60,7 @@ class Landing extends Component {
     `
     return (
       <MainCountainer>
-        <CatBtn colorTheme={colorTheme} catText={data.catBtnText}></CatBtn>
+        <CatBtn catPhotos={data.catPhotos} colorTheme={colorTheme} catText={data.catBtnText}></CatBtn>
         <DarkMode onClick={this.handleDarkClick}>{isDarkMode ?data.defaultMode : data.darkMode}</DarkMode>
         <Header data={data} colorTheme={colorTheme}/>
         <Waves fill={colorTheme.colorPrimary}></Waves>

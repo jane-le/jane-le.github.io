@@ -30,6 +30,11 @@ class Header extends Component {
             padding: 0;
             font-size: 22px;
             z-index: 100;
+            word-break: break-word;
+            text-align: center;
+            @media screen and (max-width: 767px) {
+                width: 300px;
+            }
         ` 
         const Container = styled.div`
             width: 100%;

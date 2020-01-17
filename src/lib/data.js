@@ -40,6 +40,23 @@ const data = {
     darkMode: "click here for dark mode",
     defaultMode: "click here for light mode",
     catPhotos: [
+        require('../assets/cats/1.jpg'), 
+        require('../assets/cats/2.jpg'), 
+        require('../assets/cats/3.jpg'), 
+        require('../assets/cats/4.jpg'), 
+        require('../assets/cats/5.jpg'), 
+        require('../assets/cats/6.jpg'), 
+        require('../assets/cats/7.jpg'), 
+        require('../assets/cats/8.jpg'), 
+        require('../assets/cats/9.jpg'), 
+        require('../assets/cats/10.jpg'), 
+        require('../assets/cats/11.jpg'), 
+        require('../assets/cats/12.jpg'), 
+        require('../assets/cats/13.jpg'), 
+        require('../assets/cats/14.jpg'), 
+        require('../assets/cats/15.jpg'), 
+        require('../assets/cats/16.jpg'), 
+        require('../assets/cats/17.jpg'), 
     ],
     catBtnText: "click here for cat"
 }
