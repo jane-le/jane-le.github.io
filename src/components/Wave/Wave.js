@@ -2,18 +2,18 @@
 // Modified for purpose of this project 
 import React, { Component } from 'react'
 
+let prevPath = ''
 class Wave extends Component {
   constructor (props) {
     super(props)
     this.container = React.createRef()
     this.state = { 
-      path: '',
-      previousPath: ''
+      path: prevPath,
     }
     this.defaults = {
-      height: 20,
+      height: 30,
       amplitude: 20,
-      speed: 0.1,
+      speed: 0.4,
       points: 3,
     }
     this.options = { ...props.options, ...this.defaults }
@@ -62,8 +62,9 @@ class Wave extends Component {
 
   redraw () {
     this.setState({
-      path: this.buildPath(this.calculateWavePoints())
+        path: this.buildPath(this.calculateWavePoints()),
     })
+
   }
 
   draw () {
@@ -75,9 +76,6 @@ class Wave extends Component {
     const scale = 1000
     this.step = this.elapsed * Math.PI / scale
     this.redraw()
-    this.setState({
-      previousPath: this.buildPath(this.calculateWavePoints())
-    })
   }
 
   update () {
@@ -121,6 +119,7 @@ class Wave extends Component {
   componentWillUnmount() {
     window.cancelAnimationFrame(this.frameId)
     this.frameId = 0;
+    prevPath = this.buildPath(this.calculateWavePoints());
   }
 
 
@@ -135,6 +134,7 @@ class Wave extends Component {
       id,
       ...rest
     } = this.props
+
     return (
       <div style={{ width: '100%', display: 'inline-block', ...style }}
            className={className} id={id} ref={this.container}>

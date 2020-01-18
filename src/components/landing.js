@@ -1,8 +1,6 @@
 import React, { Component } from "react"
 import Wave from "./Wave/Wave"
-import theme from "../lib/theme"
 import styled from "styled-components"
-import data from "../lib/data"
 import About from "./About"
 import Header from "./Header"
 

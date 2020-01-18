@@ -34,6 +34,7 @@ class Header extends Component {
             text-align: center;
             @media screen and (max-width: 767px) {
                 width: 300px;
+                font-size: 12px;
             }
         ` 
         const Container = styled.div`
