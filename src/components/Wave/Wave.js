@@ -6,11 +6,14 @@ class Wave extends Component {
   constructor (props) {
     super(props)
     this.container = React.createRef()
-    this.state = { path: '' }
+    this.state = { 
+      path: '',
+      previousPath: ''
+    }
     this.defaults = {
       height: 20,
       amplitude: 20,
-      speed: 0.35,
+      speed: 0.1,
       points: 3,
     }
     this.options = { ...props.options, ...this.defaults }
@@ -72,6 +75,9 @@ class Wave extends Component {
     const scale = 1000
     this.step = this.elapsed * Math.PI / scale
     this.redraw()
+    this.setState({
+      previousPath: this.buildPath(this.calculateWavePoints())
+    })
   }
 
   update () {
@@ -112,10 +118,11 @@ class Wave extends Component {
     }
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     window.cancelAnimationFrame(this.frameId)
-    this.frameId = 0
+    this.frameId = 0;
   }
+
 
   render () {
     const {

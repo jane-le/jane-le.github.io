@@ -9,33 +9,15 @@ import styled from "styled-components"
 import data from "../src/lib/data"
 import theme from "../src/lib/theme"
 import posed, { PoseGroup } from 'react-pose'
-
-const MainButton = styled.a`
-  font-family: ${theme.defaultTheme.font};
-  &:hover {
-    transform: scale(1.1);
-    color: ${theme.defaultTheme.colorPrimary};
-    background: #FFFFFF;
-  }
-  background: ${theme.defaultTheme.colorPrimary};
-  border: 1px solid ${theme.defaultTheme.colorPrimary};
-`
+import Landing from "./components/Landing"
 
 const Image = posed.img({
-  enter: {
-      opacity: 1,
-      transition: { type: 'spring', stiffness: 10, duration: 1000, ease: 'linear'}
-
-    },
-    exit: {
-      opacity: 0,
-      transition: { type: 'spring', stiffness: 10, duration: 1000, ease: 'linear'}
-
-    }
+  enter: { opacity: 1 },
+  exit: { opacity: 0 }
 })
 
-function TimeoutImage({ id, deleteAlert }) {
-  const onClick = () => deleteAlert(id);
+function TimeoutImage({ id, imageIndex, deleteImage }) {
+  const onClick = () => deleteImage(id);
   useEffect(() => {
     const timer = setTimeout(onClick, 3000);
     return () => clearTimeout(timer);
@@ -44,27 +26,48 @@ function TimeoutImage({ id, deleteAlert }) {
     top: Math.floor(Math.random() * 40 + 5).toString().concat("vh"),
     right:  Math.floor(Math.random() * 80).toString().concat("vw")
   }
-  const imageIndex = Math.floor(Math.random() * data.catPhotos.length)
 
   return (
     <PoseGroup>
-      <Image className="cat-image" style={imagePlacement} key="catImage" src={data.catPhotos[imageIndex]}/>
+      <Image className="cat-image fade-in" style={imagePlacement} key="catImage" src={data.catPhotos[imageIndex]}/>
     </PoseGroup>
   );
 }
 
-let _ID = 0; 
+let _ID = 0;
+let colorTheme = theme.defaultTheme; 
+
 function App() {
-  const [images, setAlerts] = useState([]);
-  const addAlert = () => setAlerts([...images, { id: _ID++ }]);
-  const deleteAlert = id => setAlerts(images => images.filter(m => m.id !== id));
+  const [images, setImages] = useState([]);
+  const [isDefaultMode, setIsDefaultMode] = useState([]);
+  const toggleDarkMode = () => {
+    setIsDefaultMode(!isDefaultMode);
+    if (colorTheme === theme.defaultTheme)
+      colorTheme = theme.darkTheme;
+    else 
+      colorTheme = theme.defaultTheme;
+  }
+  const addImage = imageIndex => setImages([...images, { id: _ID++, imageIndex }]);
+  const deleteImage = id => setImages(images => images.filter(m => m.id !== id));
+  
+  const MainButton = styled.a`
+    font-family: ${colorTheme.font};
+    &:hover {
+      transform: scale(1.1);
+      color: ${colorTheme.colorPrimary};
+      background: #FFFFFF;
+    }
+    background: ${colorTheme.colorPrimary};
+    border: 1px solid ${colorTheme.colorPrimary};
+  `
   return (
     <React.Fragment>
-      <Main/>
-      <MainButton className="cat-btn" onClick={() => addAlert()}>{data.catBtnText}</MainButton>
+      <Landing data={data} colorTheme={colorTheme}/>
+      <MainButton className="cat-btn" onClick={() => addImage(Math.floor(Math.random() * data.catPhotos.length))}>{data.catBtnText}</MainButton>
       {images.map(m => (
-        <TimeoutImage key={m.id} {...m} deleteAlert={deleteAlert} />
+        <TimeoutImage key={m.id} {...m} deleteImage={deleteImage} />
       ))}
+      <MainButton className="cat-btn dark-btn" onClick={() => toggleDarkMode()}>{data.darkMode}</MainButton>
     </React.Fragment>
 
   );
