@@ -34,17 +34,22 @@ function TimeoutImage({ id, imageIndex, deleteImage }) {
 }
 
 let _ID = 0;
-let colorTheme = theme.defaultTheme; 
+let colorTheme = theme.darkTheme; 
+let toggleText = data.defaultMode;
 
 function App() {
   const [images, setImages] = useState([]);
   const [isDefaultMode, setIsDefaultMode] = useState([]);
   const toggleDarkMode = () => {
     setIsDefaultMode(!isDefaultMode);
-    if (colorTheme === theme.defaultTheme)
+    if (colorTheme === theme.defaultTheme) {
       colorTheme = theme.darkTheme;
-    else 
+      toggleText = data.defaultMode;
+    }
+    else {
       colorTheme = theme.defaultTheme;
+      toggleText = data.darkMode;
+    }
   }
   const addImage = imageIndex => setImages([...images, { id: _ID++, imageIndex }]);
   const deleteImage = id => setImages(images => images.filter(m => m.id !== id));
@@ -66,7 +71,7 @@ function App() {
       {images.map(m => (
         <TimeoutImage key={m.id} {...m} deleteImage={deleteImage} />
       ))}
-      <MainButton className="cat-btn dark-btn" onClick={() => toggleDarkMode()}>{data.darkMode}</MainButton>
+      <MainButton className="cat-btn dark-btn" onClick={() => toggleDarkMode()}>{toggleText}</MainButton>
     </React.Fragment>
 
   );
