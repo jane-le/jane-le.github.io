@@ -37,8 +37,8 @@ const data = {
         }
     ],
     footer: "Jane Le 2020 | Built with ❤️.",
-    darkMode: "click here for dark mode",
-    defaultMode: "click here for light mode",
+    darkMode: "🌙",
+    defaultMode: "☀️",
     catPhotos: [
         require('../assets/cats/1.jpg'), 
         require('../assets/cats/2.jpg'), 
@@ -58,7 +58,7 @@ const data = {
         require('../assets/cats/16.jpg'), 
         require('../assets/cats/17.jpg'), 
     ],
-    catBtnText: "click here for cat"
+    catBtnText: "😺"
 }
 
 export default data;

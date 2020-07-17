@@ -34,8 +34,8 @@ function TimeoutImage({ id, imageIndex, deleteImage }) {
 }
 
 let _ID = 0;
-let colorTheme = theme.darkTheme; 
-let toggleText = data.defaultMode;
+let colorTheme = theme.defaultTheme; 
+let toggleText = data.darkMode;
 
 function App() {
   const [images, setImages] = useState([]);
@@ -63,6 +63,7 @@ function App() {
     }
     background: ${colorTheme.colorPrimary};
     border: 1px solid ${colorTheme.colorPrimary};
+    border-radius: 130px;
   `
   return (
     <React.Fragment>

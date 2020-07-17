@@ -8,11 +8,11 @@ const theme = {
     cardLineColor: "#3C00B2",
     textColor: "black",
     defaultTheme: { 
-        colorBackground: "#FFFFFF",
-        colorPrimary: "#3C00B2",
-        textColor: "#000000",
+        colorBackground: "#418B3C",
+        colorPrimary: "#FE898B",
+        textColor: "#FFFFFF",
         font: "Karla",
-        colorAccent: "#3C00B2",
+        colorAccent: "#FDDF7b",
     },
     darkTheme: {
         colorBackground: "#202040",
