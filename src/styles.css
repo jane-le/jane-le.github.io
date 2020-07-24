@@ -9,21 +9,22 @@
 
 .cat-btn {
   margin: 0;
-  position: fixed; 
-  padding: 7px;
+  position:fixed;
   top: 10px;
-  right: 10px; 
+  left: 10px;
+  padding: 10px;
   color: black;
   cursor: pointer;
   z-index: 100;
-  font-size: 12px;
+  font-size: 16px;
   color: #FFFFFF;
-  border-radius: 15px;
+  border-radius: 100px;
   transition: all .1s ease;
 }
 
 .dark-btn {
-  top: 50px;
+  right: 10px;
+  left: unset;
 }
 
 .cat-image {
