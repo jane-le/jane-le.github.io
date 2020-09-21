@@ -4,7 +4,7 @@ import styled from "styled-components"
 import TextLoop from "react-text-loop"
 import data from "../lib/data"
 
-class Card extends Component {
+export default class Card extends Component {
   render() {
     const {
         title,
@@ -99,4 +99,3 @@ class Card extends Component {
   }
 }
 
-export default Card;
