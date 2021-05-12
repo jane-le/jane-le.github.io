@@ -36,9 +36,9 @@ const data = {
             description: "PLACEHOLDER",
         }
     ],
-    footer: "Jane Le 2020 | Built with ❤️.",
-    darkMode: "🌙",
-    defaultMode: "☀️",
+    footer: "Jane Le 2020 | Built with 🍕",
+    darkMode: "lights off 🌙",
+    defaultMode: "lights on ☀️",
     catPhotos: [
         require('../assets/cats/1.jpg'), 
         require('../assets/cats/2.jpg'), 
@@ -58,7 +58,7 @@ const data = {
         require('../assets/cats/16.jpg'), 
         require('../assets/cats/17.jpg'), 
     ],
-    catBtnText: "😺"
+    catBtnText: "spawn cat pic 😺"
 }
 
 export default data;

@@ -20,15 +20,6 @@ class About extends Component {
       position: relative;
       justify-content: center;
     ` 
-
-    const NameHeader = styled.h1`
-      color: #FFFFFF;
-      font-family: ${colorTheme.font};
-      margin:0;
-      font-size: 34px;
-      font-weight: bold;
-    ` 
-
     const Footer = styled.h1`
       color: #FFFFFF;
       font-family: ${colorTheme.font};
@@ -40,7 +31,6 @@ class About extends Component {
     ` 
     return (
       <Container>
-        <NameHeader>Me</NameHeader>
         <Card 
           colorTheme={colorTheme}
           description={data.about.description} 

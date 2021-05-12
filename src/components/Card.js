@@ -25,7 +25,6 @@ export default class Card extends Component {
         opacity: 100%;
         padding: 10vh;
         margin: 30px;
-        box-shadow: 1px 1px 8px ${colorTheme.colorBackground};
         height: ${isPrimary ? theme.cardPrimaryHeight : theme.cardHeight};
         width: ${isPrimary ? theme.cardPrimaryWidth : theme.cardWidth};
         @media screen and (max-width: 767px) {
