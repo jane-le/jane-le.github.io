@@ -5,7 +5,7 @@ const data = {
     linkedinTooltip: "Here's my LinkedIn!",
     resumeTooltip: "Check out my resume!",
     resume: "data",
-    mailLink: "mailto:j39le@edu.uwaterloo.ca",
+    mailLink: "mailto:janele913@gmail.com",
     mailTooltip: "Shoot me an email!",
     headerSubtitle: "Software Developer",
     about: {
@@ -22,7 +22,8 @@ const data = {
         "sometimes volleyball player.",
         "loser for romcoms.",
         "plant mom.", 
-        "rookie boulderer."
+        "rookie boulderer.",
+        "valorant shooter.",
     ],
     projects: [{
             title: "PLACEHODLER",
