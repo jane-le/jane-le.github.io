@@ -33,6 +33,7 @@ function MostPlayedRecentTrack(props) {
       }
 
     }
+
     const [track, setTrack] = useState(null);
     useEffect(() => {
       axios({
@@ -50,12 +51,29 @@ function MostPlayedRecentTrack(props) {
         .then((res) => {
           const trackInfo = res.data.toptracks.track[0];
           console.log(trackInfo)
-          const newTrack = {
+          var topTrack = {
             name: trackInfo.name,
             artwork: trackInfo.image[0]['#text'],
             artist: trackInfo.artist.name,
           }
-          setTrack(newTrack); 
+          axios({
+            method: 'GET',
+            url: apiLink,
+            params: {
+              method: 'track.getInfo',
+              track: topTrack.name,
+              artist: topTrack.artist,
+              api_key: apiKey,
+              format: 'json',
+            },
+          })
+            .then((res) => {
+              topTrack.artwork = res.data.track.album.image[2]['#text'];
+              setTrack(topTrack); 
+            })
+            .catch(err => {
+              console.log(err);
+            })
         })
         .catch(err => {
           console.log(err);
