@@ -11,16 +11,21 @@ class Header extends Component {
             data,
             colorTheme
         } = this.props;
+
         const NameHeader = styled.a`
             color: ${colorTheme.colorAccent};
             font-family: ${colorTheme.font};
             font-weight: bold;
             margin:0;
-            padding: 30px;
             font-size: 58px;
             cursor: pointer;
             z-index: 100;
             letter-spacing: 15px;
+
+            &:hover {
+                color: ${colorTheme.colorAccent};
+                text-decoration: none;
+            }
         ` 
 
         const Subtitle = styled.h1`
@@ -34,7 +39,7 @@ class Header extends Component {
             text-align: center;
             @media screen and (max-width: 767px) {
                 width: 300px;
-                font-size: 12px;
+                font-size: 18px;
             }
         ` 
         const Container = styled.div`
@@ -42,7 +47,7 @@ class Header extends Component {
             display: flex;
             flex-direction: column; 
             align-items: center;
-            height: 100%;
+            height: 95%;
             justify-content: center;
             position: fixed;
         `

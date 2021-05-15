@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import Card from "./Card"
+import ContentCard from "./Card"
 import styled from "styled-components"
 import data from "../lib/data"
 
@@ -31,13 +31,13 @@ class About extends Component {
     ` 
     return (
       <Container>
-        <Card 
+        <ContentCard 
           colorTheme={colorTheme}
           description={data.about.description} 
           title={data.about.title}
           subtitle={data.about.subtitle}
           isPrimary={true}>
-        </Card>
+        </ContentCard>
         <Footer>{data.footer}</Footer>
       </Container>
     );

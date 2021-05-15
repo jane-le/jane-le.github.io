@@ -23,7 +23,7 @@ class SocialIcon extends Component {
       theme
     } = this.props;
 
-  const Button = styled.a`
+  const SocialButton = styled.a`
     border: 1px solid ${theme.colorAccent};
     transition: all .1s ease;
     &:hover {
@@ -32,38 +32,46 @@ class SocialIcon extends Component {
       transform: scale(1.2);
     }
     display: inline-block;
-    padding: 10px;
-    border-radius: 50px;
-    margin: 8px;
+    margin: 1rem;
+    border-radius: 10px;
     color: ${theme.colorAccent};
     height: ${this.props.width};
     width: ${this.props.width};
+    display: flex;
+    justify-content: center;
+    align-items: center;
   `
 
+  const styles = {
+    icons: {
+      height: '30px',
+      width: '30px',
+    }
+  }
     return (
       <List>
         <li>
-          <Button data-tip={data.githubTooltip} target="_blank" href={data.githubLink}>
-            <Github height={width} width={width}></Github>  
-          </Button>
+          <SocialButton data-tip={data.githubTooltip} target="_blank" href={data.githubLink}>
+            <Github style={styles.icons}></Github>  
+          </SocialButton>
           <ReactTooltip aria-haspopup='true'/>
         </li>
         <li>
-          <Button data-tip={data.resumeTooltip} target="_blank" href={Pdf}>
-            <File height={width} width={width}></File> 
-          </Button>
+          <SocialButton data-tip={data.resumeTooltip} target="_blank" href={Pdf}>
+            <File style={styles.icons}></File> 
+          </SocialButton>
           <ReactTooltip aria-haspopup='true'/>
         </li>
         <li>
-          <Button data-tip={data.linkedinTooltip} target="_blank" href={data.linkedinLink}>
-            <LinkedIn height={width} width={width}></LinkedIn>  
-          </Button>
+          <SocialButton data-tip={data.linkedinTooltip} target="_blank" href={data.linkedinLink}>
+            <LinkedIn style={styles.icons}></LinkedIn>  
+          </SocialButton>
           <ReactTooltip aria-haspopup='true'/>
         </li>
         <li>
-          <Button data-tip={data.mailTooltip} href={data.mailLink}>
-            <Mail height={width} width={width}></Mail>  
-          </Button>
+          <SocialButton data-tip={data.mailTooltip} href={data.mailLink}>
+            <Mail style={styles.icons}></Mail>  
+          </SocialButton>
           <ReactTooltip aria-haspopup='true'/>
         </li>
       </List>

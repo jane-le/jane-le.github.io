@@ -11,16 +11,18 @@ const data = {
     about: {
         title: "Hey there!👋",
         subtitle: "I'm a ",
-        description: "I have a passion for software development with a soft spot for the end-user. I enjoy leading projects, crafting elegant solutions, and having fun while doing it. Specializing in web/android development, I'm eager to apply my skills and be impactful! "
+        description: "Hiya! I study Mechatronics Engineering student at UWaterloo and have a passion for software development. I\'ve interned at <b>Bunch</b>, <b>Zynga</b>, <b>Climax Media</b> and <b>Siemens Healthineers</b>. Aside from code, I\'m obsessed with houseplants and farming games like Stardew Valley! <br>I enjoy conversations about tech and games, please don\'t hesitate to reach out 😸."
     },
     aboutLoop: [
         "software developer.",
         "mother of two cats.",
-        "tetris dominator.",
+        "tetris champ.",
         "frequent tea drinker.",
         "boiled eggs enthusiast.",
         "sometimes volleyball player.",
-        "loser for romcoms."
+        "loser for romcoms.",
+        "plant mom.",
+        "rookie boulderer."
     ],
     projects: [{
             title: "PLACEHODLER",

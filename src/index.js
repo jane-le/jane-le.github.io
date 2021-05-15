@@ -9,6 +9,7 @@ import data from "../src/lib/data"
 import theme from "../src/lib/theme"
 import posed, { PoseGroup } from 'react-pose'
 import Landing from "./components/Landing"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Image = posed.img({
   enter: { opacity: 1 },

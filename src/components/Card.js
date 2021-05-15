@@ -3,8 +3,12 @@ import theme from "../lib/theme"
 import styled from "styled-components"
 import TextLoop from "react-text-loop"
 import data from "../lib/data"
+import { Container, Row, Col, Image } from 'react-bootstrap';
+import ImageSource from '../assets/me.jpg';
 
-export default class Card extends Component {
+
+
+export default class ContentCard extends Component {
   render() {
     const {
         title,
@@ -14,32 +18,6 @@ export default class Card extends Component {
         colorTheme
     } = this.props;
 
-    const Container = styled.div`
-        background: ${colorTheme.colorBackground};
-        color: ${colorTheme.textColor};
-        flex-direction: column;
-        display: flex; 
-        align-items: left;
-        overflow: hidden; 
-        border-radius: 30px;
-        opacity: 100%;
-        padding: 10vh;
-        margin: 30px;
-        height: ${isPrimary ? theme.cardPrimaryHeight : theme.cardHeight};
-        width: ${isPrimary ? theme.cardPrimaryWidth : theme.cardWidth};
-        @media screen and (max-width: 767px) {
-            height: 50vh;
-            width: 35vh;
-            padding: 5vh;
-        }
-
-        @media screen and (max-width: 320px) {
-            height: 55vh;
-            width: 45vh;
-            padding: 5vh;
-        }
-        
-    `
     const Divider = styled.hr`
         margin-top: 20px;
         margin-bottom: 10px;
@@ -53,8 +31,7 @@ export default class Card extends Component {
         margin: 0; 
         padding: 0;
         font-family: ${colorTheme.font};
-        font-size: 14px;
-        text-align: center;
+        font-size: 18px;
         color: ${colorTheme.textColor};
     
     `
@@ -62,18 +39,17 @@ export default class Card extends Component {
     const Title = styled.h2`
         margin: 0; 
         font-family: ${colorTheme.font};
-        font-size: 24px;
+        font-size: 32px;
         line-height: 28px;
         color: ${colorTheme.textColor};
     `
 
     const Subtitle = styled.h3`
-        margin: 0; 
-        padding: 0;
         font-family: ${colorTheme.font};
-        font-size: 16px;
+        font-size: 24px;
         line-height: 20px;
         color: ${colorTheme.textColor};
+        margin-top: 0.5rem;
     `
     const TextLooper = styled(TextLoop)`
         color: ${colorTheme.colorAccent};
@@ -81,20 +57,45 @@ export default class Card extends Component {
         word-wrap: break-word;
     `
 
+    const styles = {
+        container: {
+            background: colorTheme.colorBackground,
+            color: colorTheme.textColor,
+            padding: '4rem',
+            
+
+        },
+        content: {
+            padding: '3rem',
+            textAlgin: 'left',
+        }
+    }
     return (
-        <Container>
-            <Title>{title}</Title>
-            <Subtitle>{subtitle}
-           {
-                isPrimary ? (
-                <TextLooper children={data.aboutLoop} />
-                ) : (<Subtitle></Subtitle>)
-            }
-            </Subtitle>
-            <Divider/>
-            <Description>{description}</Description>
+
+        <Container style={styles.container}>
+            <Row  className="justify-content-md-center">
+                <Col md={4} xs={12} style={{padding: 0}}><Image fluid src={ImageSource} /></Col>
+                <Col md={8} xs={12} style={styles.content}>
+                    <Title>{title}</Title>
+                    <Subtitle>{subtitle}
+                    {
+                        isPrimary ? (
+                        <TextLooper children={data.aboutLoop} />
+                        ) : (<Subtitle></Subtitle>)
+                    }
+                    </Subtitle>
+                    <Divider/>
+                    <Description>
+                    Hiya! I study Mechatronics Engineering student at UWaterloo and have a passion for software development. I've interned at <b>Bunch</b>, <b>Zynga</b>, <b>Climax Media</b> and <b>Siemens Healthineers</b>.
+                    </Description>
+                    <br></br>
+                    <Description>
+                     Aside from code, I'm obsessed with houseplants and farming games like Stardew Valley! I enjoy conversations about tech and pretty much anything else, please don't hesitate to reach out 😸.
+                    </Description>
+                </Col>
+            </Row>
         </Container>
+
     );
   }
 }
-

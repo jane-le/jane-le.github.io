@@ -1,5 +1,5 @@
 const theme = { 
-    socialIconSize: "25px",
+    socialIconSize: "50px",
     cardBackgroundColor: "#FFFFFF",
     cardPrimaryHeight: "200px",
     cardPrimaryWidth: "40%",
