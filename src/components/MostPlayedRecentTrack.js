@@ -50,11 +50,11 @@ function MostPlayedRecentTrack(props) {
       })
         .then((res) => {
           const trackInfo = res.data.toptracks.track[0];
-          console.log(trackInfo)
           var topTrack = {
             name: trackInfo.name,
             artwork: trackInfo.image[0]['#text'],
             artist: trackInfo.artist.name,
+            playCount: trackInfo.playcount,
           }
           axios({
             method: 'GET',
@@ -88,7 +88,7 @@ function MostPlayedRecentTrack(props) {
         <h2 style={styles.title}>Fun fact! My most played track on Spotify this past week was:</h2>
         <Row >
           <Col style={{padding: '2rem 2rem 0 2rem'}} md={3}><Image src={track.artwork} fluid/></Col>
-          <Col style={styles.colCenter} md={9}><h2 style={styles.name}>{track.name}</h2><h3 style={styles.title}>{track.artist}</h3></Col>
+          <Col style={styles.colCenter} md={9}><h2 style={styles.name}>{track.name}</h2><h3 style={styles.title}>{track.artist}</h3><h3 style={styles.title}>Play Count: {track.playCount}</h3></Col>
         </Row>
       </Container>
     );
