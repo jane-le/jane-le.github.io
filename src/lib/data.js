@@ -7,7 +7,7 @@ const data = {
     resume: "data",
     mailLink: "mailto:j39le@edu.uwaterloo.ca",
     mailTooltip: "Shoot me an email!",
-    headerSubtitle: "Mechatronics Engineering Student",
+    headerSubtitle: "Software Developer",
     about: {
         title: "Hey there!👋",
         subtitle: "I'm a ",
@@ -21,7 +21,7 @@ const data = {
         "boiled eggs enthusiast.",
         "sometimes volleyball player.",
         "loser for romcoms.",
-        "plant mom.",
+        "plant mom.", 
         "rookie boulderer."
     ],
     projects: [{

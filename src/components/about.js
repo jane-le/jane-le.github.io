@@ -12,11 +12,13 @@ class About extends Component {
     const Container = styled.div`
       background-attachment: fixed; 
       background: ${colorTheme.colorPrimary};
-      width: 100%;
       display: flex;
-      flex-direction: column; 
+
       align-items: center;
       height: 100vh;
+      @media only screen and (max-width: 600px) {
+        height: unset;
+      }
       position: relative;
       justify-content: center;
     ` 
@@ -32,8 +34,7 @@ class About extends Component {
     return (
       <Container>
         <ContentCard 
-          colorTheme={colorTheme}
-          description={data.about.description} 
+          colorTheme={colorTheme} 
           title={data.about.title}
           subtitle={data.about.subtitle}
           isPrimary={true}>

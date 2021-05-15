@@ -1,31 +1,31 @@
 self.__precacheManifest = [
   {
-    "revision": "baccd58a2ab36640f960",
-    "url": "/static/css/main.998eebec.chunk.css"
+    "revision": "787feb0defe1137e304b",
+    "url": "/static/css/main.9e8f581b.chunk.css"
   },
   {
-    "revision": "baccd58a2ab36640f960",
-    "url": "/static/js/main.ce44d810.chunk.js"
+    "revision": "787feb0defe1137e304b",
+    "url": "/static/js/main.1612eb7d.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
     "url": "/static/js/runtime~main.a8a9905a.js"
   },
   {
-    "revision": "dceac849d55343470b39",
-    "url": "/static/css/2.5b3dea0f.chunk.css"
+    "revision": "cc681291cf0c7b7eb8bc",
+    "url": "/static/css/2.32fee2a5.chunk.css"
   },
   {
-    "revision": "dceac849d55343470b39",
-    "url": "/static/js/2.c446978b.chunk.js"
+    "revision": "cc681291cf0c7b7eb8bc",
+    "url": "/static/js/2.42e11c55.chunk.js"
   },
   {
     "revision": "d94c8fdeaaa2cf4b9500106217560153",
     "url": "/static/media/me.d94c8fde.jpg"
   },
   {
-    "revision": "9d630196aa6850da7729e14071a39c54",
-    "url": "/static/media/resume.9d630196.pdf"
+    "revision": "0469e043de215410608e4b40c69ca243",
+    "url": "/static/media/Resume_Fall_2021_Jane_Le.0469e043.pdf"
   },
   {
     "revision": "1fc03bc7c01c8f712bab0e738ea0f991",
@@ -116,7 +116,7 @@ self.__precacheManifest = [
     "url": "/static/media/envelope-regular.1a9020c3.svg"
   },
   {
-    "revision": "ed6e83d0df0490321bea7c17a1a05427",
+    "revision": "1aa4d0465028b11248ae725c2a25f339",
     "url": "/index.html"
   }
 ];

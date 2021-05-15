@@ -64,7 +64,6 @@ function App() {
     }
     background: ${colorTheme.colorPrimary};
     border: 1px solid ${colorTheme.colorPrimary};
-    border-radius: 130px;
   `
   return (
     <React.Fragment>

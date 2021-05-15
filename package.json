@@ -4,6 +4,7 @@
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
+    "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "font-awesome": "4.7.0",
     "gh-pages": "2.0.1",
