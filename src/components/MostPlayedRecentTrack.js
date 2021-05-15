@@ -46,6 +46,7 @@ function MostPlayedRecentTrack(props) {
         },
       })
         .then((res) => {
+          console.log(res)
           const trackInfo = res.data.items[0];
           const newTrack = {
             name: trackInfo.name,
@@ -54,7 +55,10 @@ function MostPlayedRecentTrack(props) {
             spotifyLink: trackInfo.external_urls.spotify,
           }
           setTrack(newTrack);
-        });
+        })
+        .catch(err => {
+          console.log(err);
+        })
     }, []);
   
     if (!track) {
