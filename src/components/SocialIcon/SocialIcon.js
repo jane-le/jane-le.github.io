@@ -5,7 +5,7 @@ import {ReactComponent as File} from '../../assets/file-solid.svg'
 import {ReactComponent as Mail} from '../../assets/envelope-regular.svg'
 import styled from 'styled-components'
 import ReactTooltip from 'react-tooltip'
-import Pdf from '../../assets/resume.pdf'
+import Pdf from '../../assets/resumeJan2022.pdf'
 
 
 const List = styled.ul`
