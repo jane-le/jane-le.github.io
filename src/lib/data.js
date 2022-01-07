@@ -11,7 +11,7 @@ const data = {
     about: {
         title: "Hey there!👋",
         subtitle: "I'm a ",
-        description: "Hiya! I study Mechatronics Engineering student at UWaterloo and have a passion for software development. I\'ve interned at <b>Coursera</b>, <b>Bunch</b>, <b>Zynga</b>, <b>Climax Media</b> and <b>Siemens Healthineers</b>.",
+        description: "Hiya! I study Mechatronics Engineering at UWaterloo and have a passion for software development. I\'ve interned at <b>Coursera</b>, <b>Bunch</b>, <b>Zynga</b>, <b>Climax Media</b> and <b>Siemens Healthineers</b>.",
         additionalText: "Aside from code, I\'m obsessed with houseplants and farming games like Stardew Valley! I enjoy conversations about tech and pretty much anything else, please don\'t hesitate to reach out 😸."
     },
     aboutLoop: [
